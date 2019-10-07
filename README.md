@@ -1,7 +1,18 @@
 # xin_phd_study
 Weekly summaries of Xin Zhang. Latest summaries come first.
 
-## Date: 2019/09/09 – Weekly meeting
+## Date: 2019/10/07 – Weekly Summary
+
+1. **Progress:**
+	* learn how to use OpenCV-python: OpenCV Python tutorial (https://www.youtube.com/watch?v=kdLM6AOd2vc&list=PLS1QulWo1RIa7D1O6skqDQ-JZ1GGHKK-K) and pysource (https://pysource.com/2018/01/31/object-detection-using-hsv-color-space-opencv-3-4-with-python-3-tutorial-9/)
+	* OpenCV mannual (https://docs.opencv.org/4.1.1/)
+	* See papers_and_notes/OpenCV for more information.
+
+2. **Plan:**
+  * Watch all the classes in youtube
+  * Focus on Object detection
+
+## Date: 2019/09/09 – Weekly Summary
 
 1. **Progress:**
 	* Read Paper DSN19' ML-based Fault Injection for Autonomous Vehicles (random FI + ML-based fault selection engine)
@@ -22,7 +33,7 @@ Weekly summaries of Xin Zhang. Latest summaries come first.
   * Learn Apollo of Baidu and do a presentaion
 
 
-## Date: 2019/09/02 – Weekly meeting
+## Date: 2019/09/02 – Weekly Summary
 
 1. **Progress:**
 	* Read Paper AirSim: High-Fidelity Visual and Physical simulation for autonomous vehicles
