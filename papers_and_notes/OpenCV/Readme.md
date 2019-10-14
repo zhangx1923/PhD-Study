@@ -88,3 +88,94 @@ cap.release()
 ```
 release the resource
 
+## Draw graphics
+```
+img = cv2.imread('xx.jpg',1)
+#绘制线
+img = cv2.line(img, 起点坐标，终点坐标，颜色，线宽从1递增)
+#绘制箭头线
+img = cv2.arrowedLine(img, 起点，终点，颜色，线宽)
+#绘制矩形
+img = cv2.rectangle(img, 左上，右下，颜色，线宽)
+#绘制圆形
+img = cv2.circle(img, 圆心，半径，颜色，线宽)线宽取-1，填充内部
+#写字
+img = cv2.putText(img, ‘要加的字’，起点坐标，font-face，字体大小，颜色，线宽，line type)
+#font-face = cv2.FONT_HERSHEY_SIMPLEX
+#line type = cv2.LINE_AA
+```
+
+ROI(region of interest)
+
+How to copy a region to any position? (know the target region's position)
+```
+img = cv2.imread(‘dd.jpg’)
+ball = img[100:100, 200:200]
+img[300:300,400:400] = ball
+```
+将100,100到200,200区域的内容复制到300,300到400,400的区间
+
+
+## Merge two pictures into one
+```
+img = cv2.imread(‘dd.jpg’)
+img2 = cv2.imread(‘dd1.jpg’)
+```
+想要融合，需要保证两个图片的size是一样的，因此需要先resize
+AT:这里的resize是通过插值的方法实现的（将低像素的图片变得稍微清晰，就是通过插值算法完成）
+```
+img = cv2.resize(img, (512,512))
+img2 = cv2.resize(img2, (512,512))
+```
+Merge:
+```
+dst = cv2.add(img,img2)
+#或者加权融合
+dst = cv2.addWeighted(img,0.9,img2,0.1)#前一个图片占0.9（颜色深），后一个图片占0.1（颜色淡）
+```
+
+
+## Split a picture to R G B
+```
+#将图片划分为b,g,r三个部分
+b,g,r = cv2.split(img)
+#还原
+img = cv2.merge(b,g,r)
+```
+
+## Construct the trackbar
+before construction
+需要给cv弹出的window命名，这样才能知道将trackbar放到哪个window上
+```
+#如果这个名字和imshow的不一样，那么会弹出一个空白的窗口；如果一样，则为同一个窗口
+cv.nameWindow(‘image’)
+```
+constructe a trackbar
+```
+cv.createTrackbar(‘B’, ‘image’,0,255,nothing)
+```
+第一个参数是该trackbar的名字，第二个是window的名字，第三第四参数分别表示最小值和最大值，最后一个是callback函数的名字，每次数值变动都会调用这个函数
+```
+while(True):
+   cv.imshow(‘image’,img)
+   k = cv.waitKey(1)
+   If k ==27:
+      Break
+   #获取当前trackbar的值，第一个参数是bar的名字，第二个参数是window的名字
+   b = cv.getTrackbarPos(‘B’,’image’)
+```
+
+## Object detection and object tracking using HSV color space
+HSV vs RGB https://handmap.github.io/hsv-vs-rgb/
+
+
+
+
+
+
+
+
+
+
+
+
