@@ -2,7 +2,7 @@ PhD first year Dr.Hu jianjun's independent study
 
 Low precision trainning for DNN
 
-![Image text]()
+![Image text](https://github.com/CPS-zhangX/PhD-Study/blob/master/papers_and_notes/low-precision%20DNN/ReducedPrecision.png)
 
 # TRANNING：
 ## 32-->16 
