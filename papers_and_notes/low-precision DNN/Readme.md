@@ -4,7 +4,7 @@ Low precision trainning for DNN
 
 ![Image text](https://github.com/CPS-zhangX/PhD-Study/edit/master/papers_and_notes/low-precision%20DNN/ReducedPrecision.png)
 
-TRANNING：
+# TRANNING：
 32-->16 deep learning with limited numerical precision 
 Main thought:
 stochastic round scheme, instand of round to nearest
@@ -39,17 +39,10 @@ NEW FP8 and FP16
 
 
 
-INFERENCE：
+# INFERENCE：
 8-->4 inference 4 to 2 (2 paper)
 
 
 4-->2 https://www.ibm.com/blogs/research/2019/04/2-bit-precision/
       accurate and efficient 2 bit quantized neural network
 
-
-
-
-plan:
-train MNIST use pytorch
-then change the code to use 16 bit
-then change to 8-16 bit
