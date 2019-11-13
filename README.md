@@ -1,6 +1,16 @@
 # xin_phd_study
 Weekly summaries of Xin Zhang. Latest summaries come first.
 
+## Date: 2019/11/13 – Weekly Summary
+
+1. **Progress:**
+	* learn the basic knowledge about DNN 
+	* read paper about how to use limited-precision to train model.
+
+2. **Plan:**
+  * learn https://github.com/chenyuntc/pytorch-book/blob/master/chapter2-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/chapter2:%20PyTorch%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8.ipynb
+  * try to run some code about limited-precision
+
 ## Date: 2019/10/07 – Weekly Summary
 
 1. **Progress:**
