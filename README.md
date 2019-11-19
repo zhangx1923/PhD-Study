@@ -1,6 +1,16 @@
 # xin_phd_study
 Weekly summaries of Xin Zhang. Latest summaries come first.
 
+## Date: 2019/11/18 – Weekly Summary
+
+1. **Progress:**
+	* Contect to server via Putty
+	* learn a part of chap2 《深度学习框架PyTorch：入门与实践》
+	
+2. **Plan:**
+  * run code https://github.com/BertMoons/QuantizedNeuralNetworks-Keras-Tensorflow on the server and get a rough result
+  * learn chap2 and chap3, the more the better
+
 ## Date: 2019/11/13 – Weekly Summary
 
 1. **Progress:**
