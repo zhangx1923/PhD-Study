@@ -32,6 +32,7 @@ Weekly summaries of Xin Zhang. Latest summaries come first.
 	1.4.2 *filter*
 	
  	filter就是卷积核
+	
 	1.4.3 *channels*
 	
 	a.最初输入的图片样本的channels，取决于图片类型，比如RBG就是3
