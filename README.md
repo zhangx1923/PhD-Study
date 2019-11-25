@@ -6,7 +6,7 @@ Weekly summaries of Xin Zhang. Latest summaries come first.
 1. **Progress:**
 	* run code https://github.com/BertMoons/QuantizedNeuralNetworks-Keras-Tensorflow on the server and get a rough result
 	* CNN结构：若干Convolution Layer (ReLU) + pooling layer (no activation function) + 几层fully connected layers(FC for short) + softmax..... (https://www.cnblogs.com/pinard/p/6483207.html)
-	### Convolution Layer 抽取局部特征
+	### 1.1 Convolution Layer 抽取局部特征
 	#### $s(i,j) = (X*W)(i,j) = \sum_m \sum_n X(i+m,j+n)W(m,n)$
 	where X stands for the matrix of input, W is a convolution kernel. If X is 2-dimension, W is also 2; If X is multi-tensor, so does W. 对输入的图像的不同局部的矩阵和卷积核矩阵各个位置的元素相乘，然后相加得到。
 	#### Take the following pic as an example. 
@@ -16,13 +16,23 @@ Weekly summaries of Xin Zhang. Latest summaries come first.
 	使用了两个卷积核，先关注卷积核W0。由于输入是3个7x7的矩阵，或者说是7x7x3的张量，则我们对应的卷积核W0也必须最后一维是3的张量，这里卷积核W0的单个子矩阵维度为3x3。那么卷积核W0实际上是一个3x3x3的张量。这里的步幅为2，也就是每次卷积后会移动2个像素的位置。最终的卷积过程和上面的2维矩阵类似，上面是矩阵的卷积，即两个矩阵对应位置的元素相乘后相加。这里是张量的卷积，即两个张量的3个子矩阵卷积后，再把卷积的结果相加后再加上偏倚b。7x7x3的张量和3x3x3的卷积核张量W0卷积的结果是一个3x3的矩阵。由于我们有两个卷积核W0和W1，因此最后卷积的结果是两个3x3的矩阵。或者说卷积的结果是一个3x3x2的张量。
 	http://cs231n.github.io/assets/conv-demo/index.html
 	#### 卷积之后的矩阵元素还要通过ReLU进行变换
-	### Pooling layer 抽象和容错
+	### 1.2 Pooling layer 抽象和容错
 	#### 对输入张量的各个子矩阵进行压缩。
 	假如是2x2的池化，那么就将子矩阵的每2x2个元素变成一个元素，如果是3x3的池化，那么就将子矩阵的每3x3个元素变成一个元素，这样输入矩阵的维度就变小了。(average pooling and max pooling)
-	### FC 相当于DNN的隐含层，解释卷积层提取出来的信息
+	### 1.3 FC 相当于DNN的隐含层，解释卷积层提取出来的信息
 	#### 卷积层、池化层和激活函数层等操作是将原始数据映射到隐层特征空间的话，全连接层则起到将学到的*“分布式特征表示”映射到样本标记空间的作用*。
 	在实际使用中，全连接层可由卷积操作实现：对前层是全连接的全连接层可以转化为卷积核为1x1的卷积；而前层是卷积层的全连接层可以转化为卷积核为$h\times w$的全局卷积，h和w分别为前层卷积结果的高和宽
-
+	### 1.4 几个基本概念
+	1.4.1 *feature map* 
+	在cnn的每个卷积层，数据都是以三维形式存在的。你可以把它看成许多个二维图片叠在一起（像豆腐皮一样），其中每一个称为一个feature map。
+	*如何生成：*输入层：在输入层，如果是灰度图片，那就只有一个feature map；如果是彩色图片，一般就是3个feature map（红绿蓝）。其它层：层与层之间会有若干个卷积核（kernel）（也称为过滤器），上一层每个feature map跟每个卷积核做卷积，都会产生下一层的一个feature map，有N个卷积核，下层就会产生N个feather map。(不同卷积得到的是对图片从不同角度的描述，下层核实简单的边缘检测器，上层是对简单核的叠加)
+	1.4.2 *filter*
+ 	filter就是卷积核
+	1.4.3 *channels*
+	a.最初输入的图片样本的channels，取决于图片类型，比如RBG就是3
+	b.卷积操作完成后输出的out_channels，取决于卷积核的数量
+	c.卷积核中的in_channels，就是上一次卷积的out_channels
+	
 
 2. **Plan:**
   * 统计QNN代码的执行结果，并绘制图形(use matplotlib)
