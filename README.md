@@ -6,7 +6,7 @@ Weekly summaries of Xin Zhang. Latest summaries come first.
 1. **Progress:**
 	* run code https://github.com/BertMoons/QuantizedNeuralNetworks-Keras-Tensorflow on the server and get a rough result
 	* CNN结构：若干Convolution Layer (ReLU) + pooling layer (no activation function) + fully connected layers(FC for short) + softmax..... (https://www.cnblogs.com/pinard/p/6483207.html)
-	#### Convolution Layer $$s(i,j) = (X*W)(i,j) = \sum_m \sum_n X(i+m,j+n)W(m,n)$$
+	#### Convolution Layer $s(i,j) = (X*W)(i,j) = \sum_m \sum_n X(i+m,j+n)W(m,n)$
 	
 2. **Plan:**
   * 统计QNN代码的执行结果，并绘制图形
