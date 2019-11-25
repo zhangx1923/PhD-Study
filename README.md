@@ -10,8 +10,8 @@ Weekly summaries of Xin Zhang. Latest summaries come first.
 	
 2. **Plan:**
   * 统计QNN代码的执行结果，并绘制图形
-  ** 其他所有参数相同，bit数不同，横坐标epoch，总坐标精确度+时间
-  ** bit数相同，网络层数和宽度不同
+  #### 其他所有参数相同，bit数不同，横坐标epoch，总坐标精确度+时间
+  #### bit数相同，网络层数和宽度不同
   * 学习chap2
 
 ## Date: 2019/11/18 – Weekly Summary
