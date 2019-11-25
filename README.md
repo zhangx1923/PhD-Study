@@ -24,13 +24,20 @@ Weekly summaries of Xin Zhang. Latest summaries come first.
 	在实际使用中，全连接层可由卷积操作实现：对前层是全连接的全连接层可以转化为卷积核为1x1的卷积；而前层是卷积层的全连接层可以转化为卷积核为$h\times w$的全局卷积，h和w分别为前层卷积结果的高和宽
 	### 1.4 几个基本概念
 	1.4.1 *feature map* 
+	
 	在cnn的每个卷积层，数据都是以三维形式存在的。你可以把它看成许多个二维图片叠在一起（像豆腐皮一样），其中每一个称为一个feature map。
+	
 	*如何生成：*输入层：在输入层，如果是灰度图片，那就只有一个feature map；如果是彩色图片，一般就是3个feature map（红绿蓝）。其它层：层与层之间会有若干个卷积核（kernel）（也称为过滤器），上一层每个feature map跟每个卷积核做卷积，都会产生下一层的一个feature map，有N个卷积核，下层就会产生N个feather map。(不同卷积得到的是对图片从不同角度的描述，下层核实简单的边缘检测器，上层是对简单核的叠加)
+	
 	1.4.2 *filter*
+	
  	filter就是卷积核
 	1.4.3 *channels*
+	
 	a.最初输入的图片样本的channels，取决于图片类型，比如RBG就是3
+	
 	b.卷积操作完成后输出的out_channels，取决于卷积核的数量
+	
 	c.卷积核中的in_channels，就是上一次卷积的out_channels
 	
 
