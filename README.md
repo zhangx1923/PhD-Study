@@ -7,7 +7,9 @@ Weekly summaries of Xin Zhang. Latest summaries come first.
 	* In the past month, I finish the project "how to train DNN model with limited precision". Just run the code https://github.com/BertMoons/QuantizedNeuralNetworks-Keras-Tensorflow by modifying the parameters. Learnt QNN,定量神经网络, 训练模型使用fixed-point进行.
 	* Dr. Wang's project: get the length of nail in pictures and recogize the word in picture. 
 	* CSCE 750 final exam.
-	
+2. **Plan:**
+  * how to use trained model
+  * how to recoginze a lot of word in one picture
 
 ## Date: 2019/11/18 – Weekly Summary
 
