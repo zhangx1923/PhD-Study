@@ -10,6 +10,7 @@ Weekly summaries of Xin Zhang. Latest summaries come first.
 2. **Plan:**
   * how to use trained model
   * how to recoginze a lot of word in one picture
+  * OCR, tesseract-ocr, text detection, color thresholding
 
 ## Date: 2019/11/18 – Weekly Summary
 
