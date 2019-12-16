@@ -10,7 +10,7 @@ Weekly summaries of Xin Zhang. Latest summaries come first.
 2. **Plan:**
   * how to use trained model
   * how to recoginze a lot of word in one picture
-  * OCR, tesseract-ocr, text detection, color thresholding
+  * OCR, tesseract-ocr(https://github.com/UB-Mannheim/tesseract/wiki   https://blog.csdn.net/qq_31446377/article/details/81708006), text detection, color thresholding
 
 ## Date: 2019/11/18 – Weekly Summary
 
