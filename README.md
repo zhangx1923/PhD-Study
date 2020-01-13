@@ -1,6 +1,14 @@
 # xin_phd_study
 Weekly summaries of Xin Zhang. Latest summaries come first.
 
+## Date: 2020/1/13 – The beginning of NEW Semester
+
+1. **Progress:**
+	* 
+2. **Plan:**
+  * Read three papers about CV in top tier
+  * Leetcode (0/15)
+
 ## Date: 2019/12/14 – Weekly Summary
 
 1. **Progress:**
