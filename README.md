@@ -6,7 +6,7 @@ Weekly summaries of Xin Zhang. Latest summaries come first.
 1. **Progress:**
 	* 
 2. **Plan:**
-  * Read three papers about CV in top tier
+  * Read two papers about CV in top tier
   * Leetcode (0/15)
 
 ## Date: 2019/12/14 – Weekly Summary
