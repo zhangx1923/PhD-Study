@@ -8,6 +8,7 @@ Weekly summaries of Xin Zhang. Latest summaries come first.
 2. **Plan:**
   * Read two papers about CV in top tier
   * Leetcode (0/15)
+  * Record how to load pre-trained model in pytorch
 
 ## Date: 2019/12/14 – Weekly Summary
 
