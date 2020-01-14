@@ -10,5 +10,5 @@
 
 ### construct 3D face from a single picture
 如何通过单张图片恢复高质量的三维人脸是计算机视觉和图形学的重要研究领域，高质量的3D人脸通常指准确的几何、完整的纹理和真实的材质。In this paper, we present a single-image 3D face synthesis technique that can handle challenging facial expressions while recovering fine geometric details.
-1. proxy estimation
-2. details synthesis
+1. Step one: proxy estimation
+2. Step two: details synthesis
