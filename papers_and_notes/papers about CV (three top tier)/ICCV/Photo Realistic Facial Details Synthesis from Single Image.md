@@ -29,6 +29,7 @@ In this paper, we aim to produce high-quality 3D faces with fine geometric detai
 ### some concepts in this paper
 1. Geometric structure details: such as wrinkles are important indicators of age and facial expression, and are essential for producing realistic virtual human
 2. 3D Proxy: A proxy graphic is a placeholder that represents the object. This placeholder does not have the full display or attributes of the object可以理解成一个人脸的3D模型，之后再在这上面去添加细节信息
+3. Photometric stereo: a technique in computer vision for estimating the surface normals法线 of objects by observing that object under different lighting conditions. It is based on the fact that the amount of light reflected by a surface is dependent on the orientation of the surface in relation to the light source and the observer. The special case where the data is a single image is known as **shape from shading**
 
 ## Related Work
 - Reconstruction-based Techniques
