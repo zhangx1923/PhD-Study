@@ -10,8 +10,10 @@
 
 ### construct 3D face from a single picture
 如何通过单张图片恢复高质量的三维人脸是计算机视觉和图形学的重要研究领域，高质量的3D人脸通常指准确的几何、完整的纹理和真实的材质。
+
 常用的方法：
 Successful solutions by far rely on complex and often expensive capture systems such as stereo-based camera domes or photometric-based LightStage.
+
 In this paper, we aim to produce high-quality 3D faces with fine geometric details from a single image, with quality comparable to those produced from the dome systems and LightStage
 1. Step one: proxy estimation
 2. Step two: details synthesis
