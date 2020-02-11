@@ -15,3 +15,9 @@ tippetts2013
 lazaros2008
 
 a-comparative-evaluation-of-leading-dense-stereo-vision-algorithms-using-opencv-IJERTCONV2IS03023
+
+
+### 关于Calibration（还没看）
+An-Effective-Technique-for-Calibrating-a-Binocular-Stereo-Through-Projective-Reconstruction-Using-Both-a-Calibration-Object-and-the-Environment
+
+Camera Calibration in Binocular Stereo Vision of moving robot
