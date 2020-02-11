@@ -1,6 +1,18 @@
 # xin_phd_study
 Weekly summaries of Xin Zhang. Latest summaries come first.
 
+## Date: 2020/2/3 – 2020/2/10
+
+1. **Progress:**
+	* learn the basic knowledge of binocular stereo vision, see distance measurement by binocular stereo vision for detail
+	* finish a report
+	* learn how to use BNF Convert, see BNFC for detail
+	http://www.cse.chalmers.se/edu/year/2011/course/TIN321/lectures/bnfc-tutorial.html
+	https://bnfc.digitalgrammars.com/download/
+2. **Plan:**
+  * implement some algorithms about distance measurement
+  * find more paper about this technology
+
 ## Date: 2020/1/13 – The beginning of NEW Semester
 
 1. **Progress:**
