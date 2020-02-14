@@ -83,3 +83,37 @@ Source code (CUP 0.10k) (compressed tar)
 Make
 即可
 测试方法同Haskell
+
+# Ubuntu18.04
+download BNFC 2.8.2.tar.gz
+
+tar -zxvf BNFC-2.8.2.tar.gz 
+
+then
+
+cd BNFC-2.8.2.tar.gz
+
+make
+
+meet an error:/bin/sh: 1: cabal: not found
+
+that means we need to install cabal first, which is included in haskell-platform
+
+sudo apt-get install haskell-platform
+
+meet an error:E: 无法修正错误，因为您要求某些软件包保持现状，就是它们破坏了软件包间的依赖关系。
+
+see https://www.cnblogs.com/LeoGodfrey/p/3316834.html for solution
+
+and then, type in
+
+ghci
+
+to see whether you have installed haskell succesfully
+
+then
+
+make
+
+
+
