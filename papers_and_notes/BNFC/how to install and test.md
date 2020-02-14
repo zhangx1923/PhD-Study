@@ -87,19 +87,19 @@ Make
 # Ubuntu18.04
 download BNFC 2.8.2.tar.gz
 
-tar -zxvf BNFC-2.8.2.tar.gz 
+<b>tar -zxvf BNFC-2.8.2.tar.gz</b> 
 
 then
 
-cd BNFC-2.8.2.tar.gz
+<b>cd BNFC-2.8.2.tar.gz</b>
 
-make
+<b>make</b>
 
 meet an error:/bin/sh: 1: cabal: not found
 
 that means we need to install cabal first, which is included in haskell-platform
 
-sudo apt-get install haskell-platform
+<b>sudo apt-get install haskell-platform</b>
 
 meet an error:E: 无法修正错误，因为您要求某些软件包保持现状，就是它们破坏了软件包间的依赖关系。
 
@@ -107,13 +107,13 @@ see https://www.cnblogs.com/LeoGodfrey/p/3316834.html for solution
 
 and then, type in
 
-ghci
+<b>ghci</b>
 
 to see whether you have installed haskell succesfully
 
 then
 
-make
+<b>make</b>
 
 
 
