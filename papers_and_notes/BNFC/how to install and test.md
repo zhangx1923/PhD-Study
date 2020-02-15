@@ -48,8 +48,8 @@ https://www.haskell.org/platform/windows.html
 下载最新版会报错，需要下载2014年的版本：
 https://www.haskell.org/platform/prior.html
 
-测试：写一个test.txt文件：5+6*6然后
-TestCalc test.txt即可或者直接echo 5+6*6 | TestCalc
+测试：写一个test.txt文件：5+6 * 7然后
+TestCalc test.txt即可或者直接echo 5+6 * 7 | TestCalc
 
 5. bnfc -m -java Calc.cf
 得到java版本的输出 
@@ -125,4 +125,9 @@ then
 
 完成！
 
+## Haskell
+方法和window的一样，只不过测试的时候：
 
+<b>echo 5 + 6 * 7 | ./TestCalc</b>
+
+## Java
