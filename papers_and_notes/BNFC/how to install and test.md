@@ -135,7 +135,7 @@ then
 <b>echo 5 + 6 * 7 | ./TestCalc</b>
 
 ## Java
-安装jdk
+安装jdk（https://blog.csdn.net/zbj18314469395/article/details/86064849）
 
 https://www.oracle.com/technetwork/java/javase/archive-139210.html
 
@@ -167,3 +167,29 @@ sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk1.8.0_231/
 
 执行java -version看是否成功
 
+### 安装JLex
+使用mkdir在/usr/lib/jvm/jdk1.8.0_231/lib中新建文件夹J，J里面新建JLex，在JLex文件夹中执行
+
+sudo wget http://jlu.myweb.cs.uwindsor.ca/214/Main.java
+
+下载好了之后
+
+javac Main.java
+
+测试是否成功：
+
+java JLex.Main
+### 安装CUP
+使用mkdir在/usr/lib/jvm/jdk1.8.0_231/lib中新建文件夹C，C里面新建java_cup
+
+https://www.cs.princeton.edu/~appel/modern/java/CUP/
+
+Source code (CUP 0.10k) (compressed tar)
+
+下载源代码，将压缩包里面的java_cup文件夹中的东西放到/usr/lib/jvm/jdk1.8.0_231/lib/C/java_cup中去。可以使用cp命令去复制，或者更简单的：
+
+sudo nautilus 
+
+上面这行命令就可以使用root权限来打开窗口界面，对于没有权限的文件夹执行任意操作。在复制之后，不要关闭这个窗口，全选java_cup中的文件，修改权限为：root读写，组权限只读，其他权限只读；然后java_cup中的文件夹要依次打开，执行同样的修改权限的操作。
+
+测试：java java_cup.Main
