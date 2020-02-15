@@ -17,6 +17,10 @@ JDK
 
 Jlex+ CUP:a lexical analyzer generator + Parser Generator
 
+这是github地址，里面的document和example很好
+
+https://github.com/BNFC/bnfc/blob/master/document/BNF_Converter_Java_Mode.html
+
 # Steps:
 1. https://bnfc.digitalgrammars.com/download/
 
@@ -131,3 +135,35 @@ then
 <b>echo 5 + 6 * 7 | ./TestCalc</b>
 
 ## Java
+安装jdk
+
+https://www.oracle.com/technetwork/java/javase/archive-139210.html
+
+下载1.8.0.231版本，在包含下载文件的文件夹中执行命令
+
+sudo mkdir /usr/lib/jvm
+
+sudo tar -zxvf jdk-7u60-linux-x64.gz(这里改为下载的jdk的压缩包名字) -C /usr/lib/jvm
+
+sudo vi ~/.bashrc
+
+弹出的文件的最后加上（已经添加了Jlex和CUP了）：
+
+#set oracle jdk environment
+
+export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_231  ## 这里要注意目录要换成自己解压的jdk 目录
+
+export JRE_HOME=${JAVA_HOME}/jre  
+
+export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib:${JAVA_HOME}/lib/J:${JAVA_HOME}/lib/C
+
+export PATH=${JAVA_HOME}/bin:$PATH
+
+然后执行
+
+source ~/.bashrc
+
+sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk1.8.0_231/bin/java 300
+
+执行java -version看是否成功
+
