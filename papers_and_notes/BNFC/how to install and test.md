@@ -115,5 +115,14 @@ then
 
 <b>make</b>
 
+<b>make install</b>
+
+安装成功了，但是输入bnfc显示找不到命令。继续执行这面两条指令，完成安装
+
+<b>sudo apt-get update</b>
+
+<b>sudo apt-get install bnfc</b>
+
+完成！
 
 
