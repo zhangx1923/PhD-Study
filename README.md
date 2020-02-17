@@ -1,6 +1,14 @@
 # xin_phd_study
 Weekly summaries of Xin Zhang. Latest summaries come first.
 
+## Date: 2020/2/11 – 2020/2/16
+
+1. **Progress:**
+	* BNF Convert on Ubuntu
+2. **Plan:**
+  * learn BNFC and compiler related knowledge
+  * try to use Zed to get some photos
+
 ## Date: 2020/2/3 – 2020/2/10
 
 1. **Progress:**
