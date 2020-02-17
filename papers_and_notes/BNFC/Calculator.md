@@ -7,12 +7,15 @@ for this.
 
 <b>[R]</b>Aarne Ranta [R]. Implementing Programming Languages: An Introduction to Compilers and Interpreters. College Publications, 2012. ISBN: 978-1-84890-064-6.
 
+<b>所有的代码都在Calculator路径下</b>
+
 Reference:
 
 [R]
 
 http://www.cse.chalmers.se/edu/year/2011/course/TIN321/lectures/bnfc-tutorial.html#toc6
 
+https://github.com/BNFC/bnfc/tree/master/document/tutorial
 ## Haskell
 在包含calc.cf文件的文件夹下执行： (这一步就是project1a)
 
@@ -20,8 +23,63 @@ bnfc -m Calc.cf
 
 make
 
-之后测试得到的抽象语法等信息，现在我们要做的就是将这些抽象的信息转化为计算器的计算结果。
+之后测试得到的抽象语法等信息，现在我们要做的就是将这些抽象的信息转化为计算器的计算结果。在于Test.hs所在的文件夹中新建两个文件：
 
+Interpreter.hs
+
+Calculator.hs
+### Interpreter.hs
+代码如下：
+```
+module Interpreter where
+  
+import AbsCalc
+  
+interpret :: Exp -> Integer
+interpret x = case x of
+    EAdd exp0 exp  -> interpret exp0 + interpret exp
+    ESub exp0 exp  -> interpret exp0 - interpret exp
+    EMul exp0 exp  -> interpret exp0 * interpret exp
+    EDiv exp0 exp  -> interpret exp0 `div` interpret exp
+    EInt n  -> n
+
+```
+### Calculator.hs
+代码如下：
+```
+module Main where
+  
+import LexCalc
+import ParCalc
+import AbsCalc
+import Interpreter
+  
+import ErrM
+  
+main = do
+    interact calc
+    putStrLn ""
+  
+calc s = 
+    let Ok e = pExp (myLexer s) 
+    in show (interpret e)
+```
+
+之后编译Calculator.hs即可：
+
+ghc --make Calculator.hs
+### 测试
+#### 命令行输入参数
+```
+echo "1 + 2 * 3" | ./Calculator
+```
+#### 文件读入参数
+```
+./TestCalc ex1.calc
+```
+其中ex1文件中的内容为：
+
+(123 + 47 - 6) * 222 / 4
 ## Java
 在包含calc.cf文件的文件夹下执行： (这一步就是project1a)
 
