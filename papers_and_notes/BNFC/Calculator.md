@@ -79,3 +79,16 @@ public class Calculator {
 }
 ```
 执行javac Calc/Calculator.java即可
+
+### 测试
+#### 命令行输入参数
+```
+echo "1 + 2 * 3" | java Calc/Calculator
+```
+#### 文件读入参数
+```
+java Calc/Calculator < ex1.calc
+```
+其中ex1文件中的内容为：
+
+(123 + 47 - 6) * 222 / 4
