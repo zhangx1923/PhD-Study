@@ -32,42 +32,42 @@ make
 之后进去生成的Calc/Absyn文件夹，修改EInt.java, EAdd.java, EMul.java, EDiv.java, ESub.java, Exp.java文件：修改方式为在每个文件里面的类中添加一个eval()方法。
 ### Exp.java
 添加一行
-'''
+```
 public abstract Integer eval() ;
-'''
+```
 
 ### EInt.java
 添加
-'''
+```
 public Integer eval() {return integer_ ;}
-'''
+```
 
 ### EDiv.java
 添加
-'''
+```
 public Integer eval() {return exp_1.eval() / exp_2.eval() ;}
-'''
+```
 
 ### EAdd.java
 添加
-'''
+```
 public Integer eval() {return exp_1.eval() + exp_2.eval() ;}
-'''
+```
 
 ### ESub.java
 添加
-'''
+```
 public Integer eval() {return exp_1.eval() - exp_2.eval() ;}
-'''
+```
 
 ### EMul.java
 添加
-'''
+```
 public Integer eval() {return exp_1.eval() * exp_2.eval() ;}
-'''
+```
 
 接下来复制Calc文件夹中的Test.java文件，重命名为Calculator.java。将里面的Test类更换为：
-'''
+```
 public class Calculator {
   public static void main(String args[]) throws Exception
   {
@@ -77,5 +77,5 @@ public class Calculator {
     System.out.println(parse_tree.eval());
   }
 }
-'''
+```
 执行javac Calc/Calculator.java即可
