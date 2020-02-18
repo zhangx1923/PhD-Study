@@ -8,6 +8,7 @@ Weekly summaries of Xin Zhang. Latest summaries come first.
 2. **Plan:**
   * learn BNFC and compiler related knowledge
   * try to use Zed to get some photos
+  * review on Compiler Chap 1
 
 ## Date: 2020/2/3 – 2020/2/10
 
