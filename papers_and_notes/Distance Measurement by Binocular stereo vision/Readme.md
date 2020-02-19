@@ -20,6 +20,10 @@ Further, we can
 需要先完成点对点的匹配，之后分析左相机的该像素点(xl, yl)和右相机中对应点(xr, yr)的具体坐标，那么parallax=xr-xl
 
 # some useful links and paper
+Stereo Vision: Algorithms and Applications
+
+http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.368.1660&rep=rep1&type=pdf
+
 立体匹配算法很好的综述（Stereo vision algorithm）:
 
 Review of stereo vision algorithms: from software to hardware
