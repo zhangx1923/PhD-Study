@@ -75,7 +75,7 @@ echo "1 + 2 * 3" | ./Calculator
 ```
 #### 文件读入参数
 ```
-./TestCalc ex1.calc
+./Calculator < ex1.calc
 ```
 其中ex1文件中的内容为：
 
