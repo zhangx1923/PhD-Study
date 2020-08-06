@@ -27,4 +27,8 @@ Slurm 中有作业步的概念，你可以理解为子作业。这允许我们�
 
 
 ## 基本命令
+常用： https://usc-rc.github.io/sys-tutorial/slurm-scheduler
+
+full version: https://slurm.schedmd.com/pdfs/summary.pdf
+
 
