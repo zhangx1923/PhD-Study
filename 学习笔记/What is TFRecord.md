@@ -25,8 +25,30 @@ TFRecord 也不是非用不可，但它确实是谷歌官方推荐的文件格�
 下面，举例说明。因为深度学习很多都是与图片集打交道，那么，我们可以尝试下把一张张的图片转换成 TFRecord 文件。
 
 首先定义 Example 消息体。
+![image](https://raw.githubusercontent.com/CPS-zhangX/PhD-Study/master/images/tfrecord1.jpg)
+
+上面的 Example 表示，要将一张 cat 图片信息写进 TFRecord 当中，而图片信息包含了图片的名字，图片的维度信息还有图片的数据，分别对应了 name、shape、data 3 个 feature。
+
+代码实现：
+
+![image](https://raw.githubusercontent.com/CPS-zhangX/PhD-Study/master/images/tfrecord2.jpg)
+
+运行上面的代码，就可以在当前目录生成 cat.tfrecord 文件。上面代码注释都比较详细，我挑重点来讲。
+
+1. **将图片解码，然后转化成 string 数据，然后填充进去。**
+2. **Feature 的 value 是列表，所以要记得加 []**
+3. **example 需要调用 SerializetoString() 进行序列化后才行。**
 
 
 ### 读取
+![image](https://raw.githubusercontent.com/CPS-zhangX/PhD-Study/master/images/tfrecord3.jpg)
 
+代码比较简单，我也有给详细的注释，我挑重要的几点讲解一下。
+
+1. 用 dataset 去读取 tfrecord 文件
+2. 在解析 example 的时候，用现成的 API 就好了 tf.parse_single_example
+3. 用 np.fromstring() 方法就可以获取解析后的 string 数据，记得数据格式还原成 np.uint8
+4. 用 tf.image.encode_jpeg() 方法可以将图片数据编码成 jpeg 格式。
+5. 用 tf.gfile.GFile 对象可以将图片数据保存到本地。
+6. 因为将图片 shape 写进了 example 中，解析的时候必须制定维度，在这里是 [3] ,不然程序报错。
 - [1] [https://juejin.im/entry/6844903624930230279](https://juejin.im/entry/6844903624930230279)
