@@ -31,3 +31,4 @@ encoder-decoder是基于FCN的架构。encoder由于pooling逐渐减少空间维
 
 
 5. **Conditional Random Fields (CRFs) 条件随机场**
+对分割结果进行后处理，deeplab系列文章都在使用
