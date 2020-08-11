@@ -23,7 +23,11 @@ FCN将网络全连接层用卷积取代，因此使任意图像大小的输入�
 3. **encoder-decoder架构**
 
 encoder-decoder是基于FCN的架构。encoder由于pooling逐渐减少空间维度，而decoder逐渐恢复空间维度和细节信息。通常从encoder到decoder还有shortcut connetction（捷径连接，也就是跨层连接）。其中U-net就是这种架构很流行的一种
+![image](https://raw.githubusercontent.com/CPS-zhangX/PhD-Study/master/images/Unet.jpg)
 
 4. **dilated/atrous （空洞卷积）架构**
+这种结构代替了pooling，一方面它可以保持空间分辨率，另外一方面它由于可以扩大感受野因而可以很好地整合上下文信息
+![image](https://raw.githubusercontent.com/CPS-zhangX/PhD-Study/master/images/atrous.jpg)
+
 
 5. **Conditional Random Fields (CRFs) 条件随机场**
