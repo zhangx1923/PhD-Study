@@ -24,6 +24,6 @@
 ![image](https://raw.githubusercontent.com/CPS-zhangX/PhD-Study/master/images/dnn1.png)
 
 ![image](https://raw.githubusercontent.com/CPS-zhangX/PhD-Study/master/images/dnn2.png)
-的
+
 
 - [1] [深度神经网络（DNN）模型与前向传播算法](https://www.cnblogs.com/pinard/p/6418668.html)
