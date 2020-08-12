@@ -30,8 +30,9 @@
 
 ![image](https://raw.githubusercontent.com/CPS-zhangX/PhD-Study/master/images/dnn3.png)
 
-![image](https://raw.githubusercontent.com/CPS-zhangX/PhD-Study/master/images/dnn4.png)
+![image](https://raw.githubusercontent.com/CPS-zhangX/PhD-Study/master/images/dnn4.PNG)
 
+![image](https://raw.githubusercontent.com/CPS-zhangX/PhD-Study/master/images/DNN5.PNG)
 
 ### Backward propagation algorithm (BP)
 
