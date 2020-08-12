@@ -21,5 +21,9 @@
 
 层与层之间是全连接的。由于DNN层数多，则我们的线性关系系数w和偏倚b的数量也就是很多了
 
+![image](https://raw.githubusercontent.com/CPS-zhangX/PhD-Study/master/images/dnn1.png)
+
+![image](https://raw.githubusercontent.com/CPS-zhangX/PhD-Study/master/images/dnn2.png)
+
 
 - [1] [深度神经网络（DNN）模型与前向传播算法](https://www.cnblogs.com/pinard/p/6418668.html)
