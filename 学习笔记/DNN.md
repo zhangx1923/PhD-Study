@@ -26,6 +26,14 @@
 ![image](https://raw.githubusercontent.com/CPS-zhangX/PhD-Study/master/images/dnn2.png)
 
 ### Forward propagation algorithm （FP）
+从输入计算得到输出，即为FP算法的过程
+
+![image](https://raw.githubusercontent.com/CPS-zhangX/PhD-Study/master/images/dnn3.png)
+
+![image](https://raw.githubusercontent.com/CPS-zhangX/PhD-Study/master/images/dnn4.png)
+
+
+### Backward propagation algorithm (BP)
 
 
 - [1] [深度神经网络（DNN）模型与前向传播算法](https://www.cnblogs.com/pinard/p/6418668.html)
