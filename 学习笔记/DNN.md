@@ -12,5 +12,6 @@
 ![image](https://raw.githubusercontent.com/CPS-zhangX/PhD-Study/master/images/NN.PNG)
 
 ### DNN
+多层隐藏层的神经网络
 
 - [1] [深度神经网络（DNN）模型与前向传播算法](https://www.cnblogs.com/pinard/p/6418668.html)
