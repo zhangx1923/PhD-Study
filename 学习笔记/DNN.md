@@ -34,7 +34,7 @@
 
 ![image](https://raw.githubusercontent.com/CPS-zhangX/PhD-Study/master/images/DNN5.PNG)
 
-注意：**w: n*m, b:n*1**。这也是为什么我们将第二层的第4个神经元到第三层的第2个神经元的线性系数定义为w^3_{2 4}而不是w^3_{4 2}的原因。这样我们可以直接计算wx而不用先计算w的转置。
+注意：**w: n\times m, b:n\times 1**。这也是为什么我们将第二层的第4个神经元到第三层的第2个神经元的线性系数定义为w^3_{2 4}而不是w^3_{4 2}的原因。这样我们可以直接计算wx而不用先计算w的转置。
 
 ### Backward propagation algorithm (BP)
 
