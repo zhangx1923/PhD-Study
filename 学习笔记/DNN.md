@@ -65,7 +65,7 @@
 
   **2.1.3          ** 通过损失函数计算输出层的$\delta ^{i,L}$
   
-  **2.1.4          ** for l from L-1 to 2: 反向传播计算$\delta ^{i,l}=(W^{l+1})^T\delta ^{i,l+1}\odot \delta^'(z^{i,l})$
+  **2.1.4          ** for l from L-1 to 2: 反向传播计算$\delta^{i,l}=(W^{l+1})^T\delta^{i,l+1}\odot \delta(z^{i,l})$
 
   **2.2     ** for l = 2 to L, 更新第l层的$w^l$和$b^l$
  
