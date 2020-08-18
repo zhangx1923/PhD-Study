@@ -64,12 +64,15 @@
   **2.1.2          ** for l from 2 to L: 前向传播算法计算$a^{i,l}=\sigma(z^{i,l})=\sigma(W^l a^{i,l-1}+b^l)$
 
   **2.1.3          ** 通过损失函数计算输出层的$\delta ^{i,L}$
-                   
- **step3.**
+  
+  **2.1.4          ** for l from L-1 to 2: 反向传播计算$\delta ^{i,l}=(W^{l+1})^T\delta ^{i,l+1}\hadamard \delta^'(z^{i,l})$
+
+  **2.2     ** for l = 2 to L, 更新第l层的$w^l$和$b^l$
  
- **step4.**
-
-
+  **2.3     ** 如果所有W和b的变化值都小于迭代阈值，跳出循环到step3
+ 
+ **step3.** 输出W和b
+ 
 - [1] [深度神经网络（DNN）模型与前向传播算法](https://www.cnblogs.com/pinard/p/6418668.html)
 - [2] [深度神经网络（DNN）反向传播算法(BP)](https://www.cnblogs.com/pinard/p/6422831.html)
 - [3] [深度神经网络（DNN）损失函数和激活函数的选择](https://www.cnblogs.com/pinard/p/6437495.html)
