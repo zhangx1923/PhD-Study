@@ -57,19 +57,19 @@
  
  **step2.** for iter from 1 to MAX:
  
-  **2.1     ** for i from 1 to m:
+2.1 for i from 1 to m:
             
-  **2.1.1          ** 设置DNN的输入为$x_i$
+2.1.1   设置DNN的输入为$x_i$
                    
-  **2.1.2          ** for l from 2 to L: 前向传播算法计算$a^{i,l}=\sigma(z^{i,l})=\sigma(W^l a^{i,l-1}+b^l)$
+2.1.2   for l from 2 to L: 前向传播算法计算$a^{i,l}=\sigma(z^{i,l})=\sigma(W^l a^{i,l-1}+b^l)$
 
-  **2.1.3          ** 通过损失函数计算输出层的$\delta ^{i,L}$
+2.1.3   通过损失函数计算输出层的$\delta ^{i,L}$
   
-  **2.1.4          ** for l from L-1 to 2: 反向传播计算$\delta^{i,l}=(W^{l+1})^T\delta^{i,l+1}\odot \delta^{'}(z^{i,l})$
+2.1.4   for l from L-1 to 2: 反向传播计算$\delta^{i,l}=(W^{l+1})^T\delta^{i,l+1}\odot \delta^{'}(z^{i,l})$
 
-  **2.2     ** for l = 2 to L, 更新第l层的$w^l=w^l-\alpha \sum_{i=1}^m \delta^{i,l} (a^{i,l-1})^T$和$b^l = b^l-\alpha \sum_{i=1}^m \delta ^{i,l}$
+2.2 for l = 2 to L, 更新第l层的$w^l=w^l-\alpha \sum_{i=1}^m \delta^{i,l} (a^{i,l-1})^T$和$b^l = b^l-\alpha \sum_{i=1}^m \delta ^{i,l}$
  
-  **2.3     ** 如果所有W和b的变化值都小于迭代阈值，跳出循环到step3
+2.3 如果所有W和b的变化值都小于迭代阈值，跳出循环到step3
  
  **step3.** 输出W和b
  
