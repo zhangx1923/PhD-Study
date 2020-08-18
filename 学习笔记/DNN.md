@@ -38,6 +38,9 @@
 
 ### Backward propagation algorithm (BP)
 
+#### 什么是反向传播算法
+监督学习中，假设我们有m个样本，样本维度为$n_{in}$
+
 
 - [1] [深度神经网络（DNN）模型与前向传播算法](https://www.cnblogs.com/pinard/p/6418668.html)
 - [2] [深度神经网络（DNN）反向传播算法(BP)](https://www.cnblogs.com/pinard/p/6422831.html)
