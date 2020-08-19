@@ -29,7 +29,7 @@
 模型太复杂是过拟合的重要因素。
 
 ### 如何解决overfitting
-**核心**：显著减少测试误差，而不过度增加训练误差，从而提升模型的泛化能力！
+**核心**：显著减少测试误差，而不过度增加训练误差，从而提升模型的泛化能力！**下面的所有方法都是正则化的一种**。
 
 1. **数据集增强data augmentation**：获取和使用更多的数据，这是根本性方法。实际中我们拥有的数据集是有限的。解决这个问题的一种方法就是**创建“假数据”**并添加到训练集中。我们以图像数据集举例，
 能够做：旋转图像、缩放图像、随机裁剪、加入随机噪声、平移、镜像等方式来增加数据量。
@@ -39,9 +39,23 @@
 
 3. **降低特征的数量**：可以考虑降低特征的数量，也就是人工选择保留哪些特征。
 
-4. **L1正则化regularization**：在原始的损失函数后面加上一个L1正则化项，即全部权重w的绝对值的和，再乘以$\frac{\lambda}{n}$。则损失函数变为：
+4. **L1正则化regularization**：在原始的损失函数后面加上一个L1正则化项，即全部权重w的绝对值的和，再乘以$\frac{\lambda}{n}$，其中$\lambda$是可调的参数。则损失函数变为：
+$$ C = C_0 + \frac{\lambda}{n}\sum_i |w_i| $$
+对应的导数为：![image](https://raw.githubusercontent.com/CPS-zhangX/PhD-Study/master/images/l1.jpg)
 
-5. **L2正则化regularization**：
+那么权重更新为：![image](https://raw.githubusercontent.com/CPS-zhangX/PhD-Study/master/images/l12.jpg)
+
+当w=0时，相当于使用未经正则化的方法去更新w；w>0时，sgn(w)>0，则梯度下降时更新后的w变小；w<0时，sgn(w)<0，则w变大。总之，L1会使得w的值往0去靠近，**这也是L1会产生更 稀疏的解**的原因。网络中的权重尽可能为0，这意味着**减小了网络复杂度，防止了overfitting**。
+
+5. **L2正则化regularization**：又名weight decay。原始的损失函数后面再加上一个L2正则化项，即全部权重w的平方和，再乘以$\frac{\lambda}{2n}$。损失函数变为：
+$$C = C_0 + \frac{\lambda}{2n}\sum_i |w^2_i|$$
+对应的导数为(对b没有影响)：![image](https://raw.githubusercontent.com/CPS-zhangX/PhD-Study/master/images/l2.jpg)
+
+那么权重更新为：![image](https://raw.githubusercontent.com/CPS-zhangX/PhD-Study/master/images/l22.jpg)
+
+由于$n,\lambda,\eta$都大于0，所以$1-\frac{\eta \lambda}{n}$小于1。那么w将逐渐减小并趋紧0。这就是名字“weight decay”的由来。更小的权重参数 [公式] 意味着模型的复杂度更低，对训练数据的拟合刚刚好，不会过分拟合训练数据，从而提高模型的泛化能力。
+
+
 
 6. **Dropout**：Dropout 指的是在训练过程中**每次按一定的概率（比如50%）随机地“删除”一部分隐藏单元（神经元）**。所谓的“删除”不是真正意义上的删除，其实就是将该部分神经元的激活函数设为0（激活函数的输出为0），让这些神经元不计算而已。
 
