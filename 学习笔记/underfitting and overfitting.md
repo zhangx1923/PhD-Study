@@ -39,12 +39,24 @@
 
 3. **降低特征的数量**：可以考虑降低特征的数量，也就是人工选择保留哪些特征。
 
-4. **L1正则化regularization**
+4. **L1正则化regularization**：在原始的损失函数后面加上一个L1正则化项，即全部权重w的绝对值的和，再乘以$\frac{\lambda}{n}$。则损失函数变为：
 
-5. **L2正则化regularization**
+5. **L2正则化regularization**：
 
-6. **Dropout**
+6. **Dropout**：Dropout 指的是在训练过程中**每次按一定的概率（比如50%）随机地“删除”一部分隐藏单元（神经元）**。所谓的“删除”不是真正意义上的删除，其实就是将该部分神经元的激活函数设为0（激活函数的输出为0），让这些神经元不计算而已。
 
-7. **Early stopping**
+![image](https://raw.githubusercontent.com/CPS-zhangX/PhD-Study/master/images/dropout.jpg)
+
+对overfitting有效的原因在于两点：**一是这相当于在训练的过程中使用了不同的训练模型，那么最终的训练结果就是不同模型的平均输出；另一方面是降低了网络对单个神经元的依赖，提升泛化能力**。
+
+7. **Early stopping**：模型的训练过程就是对模型参数进行学习更新的过程，这个过程往往会用到一些迭代方法。Early stopping是一种迭代次数截断的方法来防止过拟合的方法，即在模型对训练数据集迭代收敛之前停止迭代来防止过拟合。
+
+为了获得性能良好的神经网络，训练过程中可能会经过很多次epoch（遍历整个数据集的次数，一次为一个epoch）。如果epoch数量太少，网络有可能发生欠拟合；如果epoch数量太多，则有可能发生过拟合。Early stopping旨在解决epoch数量需要手动设置的问题。具体做法：**每个epoch（或每N个epoch）结束后，在验证集上获取测试结果，随着epoch的增加，如果在验证集上发现测试误差上升，则停止训练，将停止之后的权重作为网络的最终参数。**缺点是无法保证损失函数足够小。
 
 8. **Bagging and random forest**: 见学习笔记中的bagging and rf一文
+
+- [1] [欠拟合、过拟合及如何防止过拟合](https://zhuanlan.zhihu.com/p/72038532)
+
+- [2] [深度神经网络（DNN）的正则化](https://www.cnblogs.com/pinard/p/6472666.html)
+
+- [3] [机器学习防止欠拟合、过拟合方法](https://zhuanlan.zhihu.com/p/29707029)
