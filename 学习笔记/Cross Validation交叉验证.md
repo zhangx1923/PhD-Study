@@ -5,9 +5,11 @@
 
 1. **最终模型与参数的选取将极大程度依赖于你对训练集和测试集的划分方法**
 
+![image](https://raw.githubusercontent.com/CPS-zhangX/PhD-Study/master/images/MSEcrossvalidation.png)
+
 十种不同的训练集和测试集划分方法得到的test MSE，可以看到，在不同的划分方法下，test MSE的变动是很大的。所以如果我们的训练集和测试集的划分方法不够好，很有可能无法选择到最好的模型与参数。
 
-2. 
+2. **只能使用部分数据进行训练**，无法充分利用已有数据，模型效果可能受到影响。
 
 
 
