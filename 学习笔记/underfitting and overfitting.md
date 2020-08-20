@@ -18,6 +18,9 @@
 没有理解数据背后的规律，**泛化能力差**。
 
 ![image](https://raw.githubusercontent.com/CPS-zhangX/PhD-Study/master/images/fitting2.jpg)
+```diff
+- 论文中说明没有overfitting的方法：画张折线图：x轴是你的树的数量（或其它参数），y轴是在validation上的结果（１０份平均）。这图显示你用的树的数量正好对应y的一个局部最大值处即可。
+```
 
 造成overfitting的原因：
 
