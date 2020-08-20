@@ -71,6 +71,8 @@ $$C = C_0 + \frac{\lambda}{2n}\sum_i |w^2_i|$$
 
 **详见学习笔记中的"集成学习"一文。**
 
+9. **交叉验证**：详见“交叉验证”一文
+
 - [1] [欠拟合、过拟合及如何防止过拟合](https://zhuanlan.zhihu.com/p/72038532)
 
 - [2] [深度神经网络（DNN）的正则化](https://www.cnblogs.com/pinard/p/6472666.html)
