@@ -41,21 +41,49 @@ bagging的个体弱学习器的训练集是通过随机采样得到的。通过T
 #### random forest
 使用bagging思路。用cart决策树作为弱学习器。RF对决策树的建立做了改进：**对于普通的决策树，我们会在节点上所有的n个样本特征中选择一个最优的特征来做决策树的左右子树划分，但是RF通过随机选择节点上的一部分样本特征，这个数字小于n，假设为$n_{sub}$，然后在这些随机选择的$n_{sub}$个样本特征中，选择一个最优的特征来做决策树的左右子树划分。这样进一步增强了模型的泛化能力**。
 
-$n_{sub}$越小，模型越健壮，对于训练集的拟合程度会变差。即$n_{sub}$越小，模型的方差会减小，偏倚会增大。实际中通过交叉验证来调整$n_{sub}$。
+$n_{sub}$越小，模型越健壮，对于训练集的拟合程度会变差。即$n_{sub}$越小，模型的方差会减小，偏倚会增大。实际中通过交叉验证来调整$n_{sub}$。假设属性数为d，**一般而言$n_{sub}=log_2d$是最合适的。**
 
 算法流程：
 
-input: $D={(x_1,y_1),(x_2,y_2),\cdots,(x_m,y_m)}$，弱分类器迭代次数T
+input: $D={(x_1,y_1),(x_2,y_2),\cdots,(x_m,y_m)}$，弱分类器个数T
 
 output: 强分类器f(x)
 
 1. for t from 1 to T:
+
 1.1 对训练集进行第t次随机采样，共采集m次，得到包含m个样本的采样集$D_t$
-1.2 
+
+1.2 用采样集$D_t$训练第t个决策树模型$G_t(x)$，在训练决策树模型的节点的时候， 在节点上所有的样本特征中选择一部分样本特征， 在这些随机选择的部分样本特征中选择一个最优的特征来做决策树的左右子树划分
+
+2. 分类：投票；回归：平均。
+
+#### RF优点
+1. 训练可以高度并行化，对于大数据时代的大样本训练速度有优势。
+
+2. 由于可以随机选择决策树节点划分特征，这样在样本特征维度很高的时候，仍然能高效的训练模型。
+
+3. 由于采用了随机采样，训练出的模型的方差小，泛化能力强
+
+4. 对部分特征缺失不敏感。
+
+5. 训练完之后能给出哪些feature更重要。
+
+#### RF缺点
+1. 在某些噪音比较大的样本集上，RF模型容易陷入过拟合。
+
+2. 对于有不同取值的属性的数据，取值划分较多的属性（指某个属性的取值很多）会对随机森林产生更大的影响，所以随机森林在这种数据上产出的属性权值是不可信的。
+
+#### RF不会overfitting？
+Breiman： “*Random forests does not overfit. You can run as many trees as you want*” ？？？
+
+其实会，只是因为两个随机（自助随机采样，属性随机）使得对于overfitting问题更有效。Breiman的意思应该是：随着tree增加，testing error不会急剧增大，会稳定在一个数值。但是我们通常讨论的overfitting是testing error比training error大很多，这个RF是无法避免的，但是会限制error的limit。
+
 
 - [1] [集成学习原理](https://www.cnblogs.com/pinard/p/6131423.html)
 
 - [2] [Does Random Forest overfit?](https://mljar.com/blog/random-forest-overfitting/)
 
 - [3] [bagging与随机森林算法原理小结](https://www.cnblogs.com/pinard/p/6156009.html)
+
+- [4] [机器学习 第十三章 集成学习（2） Bagging 随机森林 结合策略](https://zyzypeter.github.io/2017/08/09/machine-learning-ch13-Bagging-RF/#%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97)
 
