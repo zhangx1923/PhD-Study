@@ -19,3 +19,10 @@ model too large: variance high;
 
 模型不可能在变的更复杂的同时变得更简单：we need to find the right/good balance without overfitting and underfitting the data.
  
+训练模型的最终目的：在测试数据上拟合好（Error-test小）。但实际上test data往往拿不到，那么分两步：
+
+1. 让error-train尽可能小
+
+2. 让error-train尽可能等于error-test
+
+(因为A小，而A=B，那么B就小)。对于第一步而言：如何时error train尽可能小？模型复杂化，参数多点，这会导致low bias；对于第二步而言，如何使error train尽可能等于error test呢？模型简单化，减少参数，具有通用性，这就是low variance
