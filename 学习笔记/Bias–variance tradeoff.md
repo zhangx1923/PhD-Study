@@ -8,7 +8,9 @@
 方差。表示模型面对同规模的不同数据集时的预测结果发生变动的程度。高方差表示模型太关注训练数据，不具有泛化性。此时在训练集上表现很好，而测试集误差大。
 
 #### trade-off
+![image](https://raw.githubusercontent.com/CPS-zhangX/PhD-Study/master/images/bias.png)
 
+![image](https://raw.githubusercontent.com/CPS-zhangX/PhD-Study/master/images/variance.png)
 
 
 model too simple: bias high;
