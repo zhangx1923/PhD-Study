@@ -11,7 +11,7 @@
 ![image](https://raw.githubusercontent.com/CPS-zhangX/PhD-Study/master/images/bias.png)
 
 ![image](https://raw.githubusercontent.com/CPS-zhangX/PhD-Study/master/images/variance.png)
-
+ 
 
 model too simple: bias high;
 
