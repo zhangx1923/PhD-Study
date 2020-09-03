@@ -18,3 +18,4 @@ model too simple: bias high;
 model too large: variance high;
 
 模型不可能在变的更复杂的同时变得更简单：we need to find the right/good balance without overfitting and underfitting the data.
+ 
